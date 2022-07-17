@@ -13,7 +13,8 @@ function Icons(props){
 function Mobile(){
   return (
     <div class="fundo-mobile">
-      <Icons home="home" search="search-outline" heart="heart-outline" person="person-outline"/>
+      <Icons home="home" search="search-outline" circle="add-circle-outline"
+      heart="heart-outline" person="person-outline"/>
     </div>
   );
 }

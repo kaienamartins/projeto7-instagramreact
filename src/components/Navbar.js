@@ -1,34 +1,59 @@
+function LogoInstagram(props){
+  return(
+    <div class="logo">
+      <ion-icon name={props.logo}></ion-icon>
+      <div class={props.bar}></div>
+      <img src={props.img} alt="logo" />
+    </div>
+  );
+}
+
+function Search(props){
+  return(
+    <div class="pesquisa">
+      <input type="text" placeholder={props.search} />
+    </div>
+  );
+}
+
+function Icons(props){
+  return (
+    <div class="icones">
+        <ion-icon name={props.plane}></ion-icon>
+        <ion-icon name={props.compass}></ion-icon>
+        <ion-icon name={props.heart}></ion-icon>
+        <ion-icon name={props.person}></ion-icon>
+    </div>
+  );
+}
+
+
 function Navbar(){
     return (
       <div class="navbar">
         <div class="container">
           <div class="logo">
-            <ion-icon name="logo-instagram"></ion-icon>
-            <div class="separador"></div>
-            <img src="assets/img/logo.png" alt="logo" />
+            <LogoInstagram logo="logo-instagram" bar="separador" img="assets/img/logo.png" />
           </div>
   
           <div class="logo-mobile">
-            <ion-icon name="logo-instagram" alt="logo"></ion-icon>
+            <LogoInstagram logo="logo-instagram"/>
           </div>
   
           <div class="instagram-mobile">
-            <img src="assets/img/logo.png" alt="logo" />
+            <LogoInstagram logo="logo-instagram"/>
           </div>
     
           <div class="pesquisa">
-            <input type="text" placeholder="Pesquisar" />
+            <Search search="Pesquisar"/>
           </div>
     
           <div class="icones">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-            <ion-icon name="compass-outline"></ion-icon>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="person-outline"></ion-icon>
+            <Icons plane="paper-plane-outline" compass="compass-outline" heart="heart-outline" person="person-outline"/>
           </div>
   
           <div class="icones-mobile">
-            <ion-icon name="paper-plane-outline"></ion-icon>
+              <Icons plane="paper-plane-outline"/>
           </div>
         </div>
       </div>

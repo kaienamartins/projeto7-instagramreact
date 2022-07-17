@@ -2,7 +2,7 @@ import Sidebar from "./Sidebar";
 
 function Story(props){
   return (
-    <div>
+    <div class="story">
       <div class="imagem">
         <img src={props.img} alt="icon"/>
       </div>
@@ -10,6 +10,17 @@ function Story(props){
     </div>
   );
 }
+
+const StoryJSX = [
+  {img:"assets/img/9gag.svg" , user: "9gag"},
+  {img:"assets/img/meowed.svg", user: "meowed"},
+  {img:"assets/img/barked.svg", user: "barked"},
+  {img:"assets/img/nathanwpylestrangeplanet.svg", user: "nathanwpylestrangeplanet"},
+  {img:"assets/img/wawawicomics.svg", user:"wawawicomics"},
+  {img:"assets/img/respondeai.svg", user:"respondeai"},
+  {img:"assets/img/filomoderna.svg", user: "filomoderna"},
+  {img:"assets/img/memeriagourmet.svg", user:"memeriagourmet"},
+];
 
 function UserTop(props){
   return(
@@ -19,6 +30,14 @@ function UserTop(props){
   );
 }
 
+const postOneUserJSX = [
+  {image:"assets/img/meowed.svg"},
+];
+
+const postTwoUserJSX = [
+  {image: "assets/img/barked.svg"}
+];
+
 function Action(props){
   return(
     <div class="acoes">
@@ -27,11 +46,24 @@ function Action(props){
   );
 }
 
+const actionJSX = [
+  {actionicon:"ellipsis-horizontal"},
+];
+
 function Content(props){
   return(
     <img src={props.contentpic} alt="post"/>
   );
 }
+
+const ContentOneJSX = [
+  {contentpic:"assets/img/gato-telefone.svg"},
+];
+
+const contentTwoJSX = [
+  {contentpic:"assets/img/dog.svg"},
+];
+
 
 function BottomActions(props){
   return (
@@ -49,6 +81,10 @@ function Bookmark(props){
   );
 }
 
+const bookmark = [
+  {bookmark:"bookmark-outline"}
+];
+
 function Likes(props){
   return (
     <div>
@@ -62,56 +98,25 @@ function Body(){
       <div class="corpo">
       <div class="esquerda">
         <div class="stories">
-          <div class="story">
-            <Story user="9gag" img="assets/img/9gag.svg"/>
-          </div>
-  
-          <div class="story">
-            <Story user="meowed" img="assets/img/meowed.svg"/>
-          </div>
-  
-          <div class="story">
-            <Story user="barked" img="assets/img/barked.svg"/>
-          </div>
-  
-          <div class="story">
-            <Story user="nathanwpylestrangeplanet" img="assets/img/nathanwpylestrangeplanet.svg"/>
-          </div>
-  
-          <div class="story">
-            <Story user="wawawicomics" img="assets/img/wawawicomics.svg"/>
-          </div>
-          
-          <div class="story">
-            <Story user="respondeai" img="assets/img/respondeai.svg"/>
-          </div>
-  
-          <div class="story">
-            <Story user="filomoderna" img="assets/img/filomoderna.svg"/>
-          </div>
-  
-          <div class="story">
-            <Story user="memeriagourmet" img="assets/img/memeriagourmet.svg"/>
-          </div>
-
+        {StoryJSX.map((item) => <Story img={item.img} user={item.user}/>
+          )}
           <div class="setinha">
-            <ion-icon name="chevron-forward-circle"></ion-icon>
+              <ion-icon name="chevron-forward-circle"></ion-icon>
           </div>
         </div>
         <div class="posts">
           <div class="post">
             <div class="topo">
               <div class="usuario">
-                <UserTop image="assets/img/meowed.svg"/>
-                meowed
+                {postOneUserJSX.map((item) => <UserTop image={item.image}/>)}meowed
               </div>
               <div class="acoes">
-                <Action actionicon="ellipsis-horizontal"/>
+                {actionJSX.map((item) => <Action actionicon={item.actionicon}/>)}
               </div>
             </div>
   
             <div class="conteudo">
-              <Content contentpic="assets/img/gato-telefone.svg"/>
+              {ContentOneJSX.map((item) => <Content contentpic={item.contentpic}/>)} 
             </div>
   
             <div class="fundo">
@@ -120,7 +125,7 @@ function Body(){
                   <BottomActions heart="heart-outline" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
                 </div>
                 <div>
-                  <Bookmark bookmark="bookmark-outline"/>
+                  {bookmark.map((item) => <Bookmark bookmark={item.bookmark}/>)}
                 </div>
               </div>
   
@@ -136,16 +141,15 @@ function Body(){
           <div class="post">
             <div class="topo">
               <div class="usuario">
-                <UserTop image="assets/img/barked.svg"/>
-                barked
+                {postTwoUserJSX.map((item) => <UserTop image={item.image}/>)}barked
               </div>
               <div class="acoes">
-                <Action actionicon="ellipsis-horizontal"/>
+                {actionJSX.map((item) => <Action actionicon={item.actionicon}/>)}
               </div>
             </div>
   
             <div class="conteudo">
-              <Content contentpic="assets/img/dog.svg"/>
+              {contentTwoJSX.map((item) => <Content contentpic={item.contentpic}/>)}
             </div>
   
             <div class="fundo">
@@ -154,7 +158,7 @@ function Body(){
                   <BottomActions heart="heart-outline" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
                 </div>
                 <div>
-                  <Bookmark bookmark="bookmark-outline"/>
+                  {bookmark.map((item) => <Bookmark bookmark={item.bookmark}/>)}
                 </div>
               </div>
   
