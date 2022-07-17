@@ -1,16 +1,4 @@
 import ReactDOM from "react-dom";
-import Navbar from "./Navbar";
-import Body from "./Body";
-import Mobile from "./Mobile";
-
-function App(){
-  return (
-    <div>
-      <Navbar/>
-      <Body/>
-      <Mobile/>
-    </div>
-  ); 
-}
+import App from "./App";
 
 ReactDOM.render(<App/>, document.querySelector('.root'));
