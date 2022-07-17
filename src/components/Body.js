@@ -1,115 +1,131 @@
+import Sidebar from "./Sidebar";
+
+function Story(props){
+  return (
+    <div>
+      <div class="imagem">
+        <img src={props.img} alt="icon"/>
+      </div>
+      <div class="usuario">{props.user}</div>
+    </div>
+  );
+}
+
+function UserTop(props){
+  return(
+    <div class="usuario">
+      <img src={props.image} alt="icon"/>
+    </div>
+  );
+}
+
+function Action(props){
+  return(
+    <div class="acoes">
+      <ion-icon name={props.actionicon}></ion-icon>
+    </div>
+  );
+}
+
+function Content(props){
+  return(
+    <img src={props.contentpic} alt="post"/>
+  );
+}
+
+function BottomActions(props){
+  return (
+    <div> 
+      <ion-icon name={props.heart}></ion-icon>
+      <ion-icon name={props.chatbubble}></ion-icon>
+      <ion-icon name={props.plane}></ion-icon>
+    </div>
+  );
+}
+
+function Bookmark(props){
+  return (
+    <ion-icon name={props.bookmark}></ion-icon>
+  );
+}
+
+function Likes(props){
+  return (
+    <div>
+      <img src={props.imagelike} alt="profile" />
+    </div>
+  );
+}
+
 function Body(){
     return (
       <div class="corpo">
       <div class="esquerda">
         <div class="stories">
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/9gag.svg" alt="icon"/>
-            </div>
-            <div class="usuario">
-              9gag
-            </div>
+            <Story user="9gag" img="assets/img/9gag.svg"/>
           </div>
   
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/meowed.svg" alt="icon"/>
-            </div>
-            <div class="usuario">
-              meowed
-            </div>
+            <Story user="meowed" img="assets/img/meowed.svg"/>
           </div>
   
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/barked.svg" alt="story"/>
-            </div>
-            <div class="usuario">
-              barked
-            </div>
+            <Story user="barked" img="assets/img/barked.svg"/>
           </div>
   
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/nathanwpylestrangeplanet.svg" alt="story"/>
-            </div>
-            <div class="usuario">
-              nathanwpylestrangeplanet
-            </div>
+            <Story user="nathanwpylestrangeplanet" img="assets/img/nathanwpylestrangeplanet.svg"/>
           </div>
   
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/wawawicomics.svg" alt="story"/>
-            </div>
-            <div class="usuario">
-              wawawicomics
-            </div>
+            <Story user="wawawicomics" img="assets/img/wawawicomics.svg"/>
           </div>
           
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/respondeai.svg" alt="story"/>
-            </div>
-            <div class="usuario">
-              respondeai
-            </div>
+            <Story user="respondeai" img="assets/img/respondeai.svg"/>
           </div>
   
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/filomoderna.svg" alt="story"/>
-            </div>
-            <div class="usuario">
-              filomoderna
-            </div>
+            <Story user="filomoderna" img="assets/img/filomoderna.svg"/>
           </div>
   
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/memeriagourmet.svg" alt="story"/>
-            </div>
-            <div class="usuario">
-              memeriagourmet
-            </div>
+            <Story user="memeriagourmet" img="assets/img/memeriagourmet.svg"/>
           </div>
-  
+
           <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
           </div>
         </div>
-  
         <div class="posts">
           <div class="post">
             <div class="topo">
               <div class="usuario">
-                <img src="assets/img/meowed.svg" alt="icon"/>
+                <UserTop image="assets/img/meowed.svg"/>
                 meowed
               </div>
               <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
+                <Action actionicon="ellipsis-horizontal"/>
               </div>
             </div>
   
             <div class="conteudo">
-              <img src="assets/img/gato-telefone.svg" alt="post"/>
+              <Content contentpic="assets/img/gato-telefone.svg"/>
             </div>
   
             <div class="fundo">
               <div class="acoes">
                 <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
+                  <BottomActions heart="heart-outline" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
                 </div>
                 <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <Bookmark bookmark="bookmark-outline"/>
                 </div>
               </div>
   
               <div class="curtidas">
-                <img src="assets/img/respondeai.svg" alt="profile" />
+                <Likes imagelike="assets/img/respondeai.svg"/>
                 <div class="texto">
                   Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
                 </div>
@@ -120,32 +136,30 @@ function Body(){
           <div class="post">
             <div class="topo">
               <div class="usuario">
-                <img src="assets/img/barked.svg" alt="icon"/>
+                <UserTop image="assets/img/barked.svg"/>
                 barked
               </div>
               <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
+                <Action actionicon="ellipsis-horizontal"/>
               </div>
             </div>
   
             <div class="conteudo">
-              <img src="assets/img/dog.svg" alt="post"/>
+              <Content contentpic="assets/img/dog.svg"/>
             </div>
   
             <div class="fundo">
               <div class="acoes">
                 <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
+                  <BottomActions heart="heart-outline" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
                 </div>
                 <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <Bookmark bookmark="bookmark-outline"/>
                 </div>
               </div>
   
               <div class="curtidas">
-                <img src="assets/img/adorable_animals.svg" alt="icon"/>
+                <Likes imagelike="assets/img/adorable_animals.svg"/>
                 <div class="texto">
                   Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
                 </div>
@@ -154,93 +168,8 @@ function Body(){
           </div>
         </div>
       </div>
-  
-      <div class="sidebar">
-        <div class="usuario">
-          <img src="assets/img/catanacomics.svg" alt="icon"/>
-          <div class="texto">
-            <strong>catanacomics</strong>
-            Catana
-          </div>
-        </div>
-  
-        <div class="sugestoes">
-          <div class="titulo">
-            Sugestões para você
-            <div>Ver tudo</div>
-          </div>
-  
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/bad.vibes.memes.svg" alt="icon"/>
-              <div class="texto">
-                <div class="nome">bad.vibes.memes</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-  
-            <div class="seguir">Seguir</div>
-          </div>
-  
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/chibirdart.svg" alt="icon"/>
-              <div class="texto">
-                <div class="nome">chibirdart</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-  
-            <div class="seguir">Seguir</div>
-          </div>
-  
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/razoesparaacreditar.svg" alt="icon"/>
-              <div class="texto">
-                <div class="nome">razoesparaacreditar</div>
-                <div class="razao">Novo no Instagram</div>
-              </div>
-            </div>
-  
-            <div class="seguir">Seguir</div>
-          </div>
-  
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/adorable_animals.svg" alt="icon"/>
-              <div class="texto">
-                <div class="nome">adorable_animals</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-  
-            <div class="seguir">Seguir</div>
-          </div>
-  
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/smallcutecats.svg" alt="icon"/>
-              <div class="texto">
-                <div class="nome">smallcutecats</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-  
-            <div class="seguir">Seguir</div>
-          </div>
-        </div>
-  
-        <div class="links">
-          Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
-        </div>
-  
-        <div class="copyright">
-          © 2021 INSTAGRAM DO FACEBOOK
-        </div>
-      </div>
+      <Sidebar/>
     </div>
-  
     );
 }
 
