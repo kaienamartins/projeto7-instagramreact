@@ -46,7 +46,13 @@ body {
 
 .navbar .logo img {
   position: relative;
-  top: 3px;
+  top: 5px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .navbar .logo .separador {
@@ -347,6 +353,11 @@ body {
 .logo-mobile, .instagram-mobile {
   display: none !important;
 }
+
+.heartFilled {
+  color: #ff0000;
+}
+
 
 @media (max-width: 935px) {
   .sidebar {

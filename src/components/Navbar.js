@@ -3,7 +3,7 @@ function LogoInstagram(props){
     <div class="logo">
       <ion-icon name={props.logo}></ion-icon>
       <div class={props.bar}></div>
-      <img src={props.img} alt="logo" />
+      <img class="nameIg" src={props.img} alt="logo" />
     </div>
   );
 }
