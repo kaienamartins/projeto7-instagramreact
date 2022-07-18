@@ -1,13 +1,13 @@
 import react from "react"
 
 function UserTop(props){
-    return(
+  return(
       <div class="usuario">
         <img src={props.image} alt="icon"/>
       </div>
     );
   }
-  
+
   const postOneUserJSX = [
     {image:"assets/img/meowed.svg"},
   ];
