@@ -2,9 +2,9 @@ import react from "react"
 
 function UserTop(props){
   return(
-      <div class="usuario">
-        <img src={props.image} alt="icon"/>
-      </div>
+    <div class="usuario">
+      <img src={props.image} alt="icon"/>
+    </div>
     );
   }
 

@@ -18,7 +18,6 @@ function Mobile(){
       <Icons home="home" search="search-outline" circle="add-circle-outline"
       heart="heart-outline" person="person-outline"/>
     </div>
-    
   );
 }
 

@@ -27,7 +27,6 @@ function Icons(props){
   );
 }
 
-
 function Navbar(){
     return (
       <div class="navbar">

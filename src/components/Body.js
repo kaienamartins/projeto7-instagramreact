@@ -23,7 +23,6 @@ const StoryJSX = [
   {img:"assets/img/memeriagourmet.svg", user:"memeriagourmet"},
 ];
 
-
 function Body(){
     return (
       <div class="corpo">
