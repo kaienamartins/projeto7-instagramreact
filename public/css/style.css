@@ -36,6 +36,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  z-index: 444 !important;
 }
 
 .navbar .container > * {
@@ -354,10 +355,17 @@ body {
   display: none !important;
 }
 
+.heart {
+  color: #000;
+}
+
 .heartFilled {
   color: #ff0000;
 }
 
+ion-icon {
+  visibility: visible;
+}
 
 @media (max-width: 935px) {
   .sidebar {

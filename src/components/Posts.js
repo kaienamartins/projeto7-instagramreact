@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react";
 
 function UserTop(props){
   return(
@@ -44,15 +44,17 @@ function UserTop(props){
   
   
   function BottomActions(props){
-  
-    const [color, setColor] = react.useState("heart");
+    const [color, setColor] = React.useState("heart");
+    const [heartState, setHeartState] = React.useState("heart-outline");
     return (
       <div> 
-        <ion-icon name={props.heart} class={color} onClick={() => {
+        <ion-icon name={heartState} class={color} onClick={() => {
           if(color === "heart") {
             setColor("heartFilled md hydrated");
+            setHeartState("heart")
           }else {
             setColor("heart md hydrated")
+            setHeartState("heart-outline")
           }
   
         }}></ion-icon>
@@ -101,7 +103,7 @@ function Posts(){
             <div class="fundo">
               <div class="acoes">
                 <div>
-                  <BottomActions heart="heart" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
+                  <BottomActions heart="heart-outline" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
                 </div>
                 <div>
                   {bookmark.map((item) => <Bookmark bookmark={item.bookmark}/>)}
@@ -134,7 +136,7 @@ function Posts(){
             <div class="fundo">
               <div class="acoes">
                 <div>
-                  <BottomActions heart="heart" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
+                  <BottomActions heart="heart-outline" chatbubble="chatbubble-outline" plane="paper-plane-outline"/>
                 </div>
                 <div>
                   {bookmark.map((item) => <Bookmark bookmark={item.bookmark}/>)}

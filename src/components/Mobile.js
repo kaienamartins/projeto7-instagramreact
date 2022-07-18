@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 function Icons(props){
   return (
     <div class="fundo-mobile">
@@ -14,7 +13,6 @@ function Icons(props){
 function Mobile(){
   return (
     <div class="fundo-mobile">
-      <Navbar/>
       <Icons home="home" search="search-outline" circle="add-circle-outline"
       heart="heart-outline" person="person-outline"/>
     </div>

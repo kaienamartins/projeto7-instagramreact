@@ -3,7 +3,7 @@ function LogoInstagram(props){
     <div class="logo">
       <ion-icon name={props.logo}></ion-icon>
       <div class={props.bar}></div>
-      <img class="nameIg" src={props.img} alt="logo" />
+      <img src={props.img} alt="logo" />
     </div>
   );
 }
@@ -40,7 +40,7 @@ function Navbar(){
           </div>
   
           <div class="instagram-mobile">
-            <LogoInstagram logo="logo-instagram"/>
+            <LogoInstagram img="assets/img/logo.png" />
           </div>
     
           <div class="pesquisa">
